@@ -17,11 +17,13 @@ describe('Wordpress Blog Creation Test Suite', function() {
 
     it('Start creating a blog', function() {
       cy.get("#header > div.masterbar__publish > a > span").click()
-      cy.wait(22000)
+      cy.wait(30000)
     })
 
     it('Add page title and desciption', function() {
-      cy.get(".editor-post-title__input").type("MyFirstBlogOnWordPress")
+      cy.get("[placeholder='Add title']").type("MyFirstBlogOnWordPress")
+      cy.wait(10000)
+      //cy.get(".editor-post-title__input").type("MyFirstBlogOnWordPress")
       cy.get("[role='textbox']").type("It feels good to write a blog")
       cy.wait(22000)
     })
