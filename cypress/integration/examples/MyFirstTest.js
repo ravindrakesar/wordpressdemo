@@ -6,7 +6,7 @@ describe('My Test Suite', function() {
       cy.get("#usernameOrEmail").type("ravindrakesar")
       cy.get("[type='submit']").click()
       cy.wait(3000)
-      cy.get("#password").type("Shonu2014")
+      cy.get("#password").type("*********")
       cy.get("[type='submit']").click()
       cy.wait(8000)
       cy.get("#header > div.masterbar__publish > a > span").click()
